@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
   try {
     const data = await resend.emails.send({
-      from: 'onboarding@resend.dev', // Update with your verified domain
+      from: 'info@appable.dev', // Update with your verified domain
       to: ['dennis@appable.dev'], // Replace with your actual email
       subject: `New contact form submission from ${name}`,
       html: `
