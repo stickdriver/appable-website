@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# appable-website
-Appable Website
-=======
-# Appable Landing – Modern V3
+# Appable Landing Page
 
 A minimal Vite + React (TypeScript) project containing the latest Appable landing page.
 
