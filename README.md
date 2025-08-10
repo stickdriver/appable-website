@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# appable-website
-Appable Website
-=======
-# Appable Landing – Modern V3
+# Appable Landing Page
 
 A minimal Vite + React (TypeScript) project containing the latest Appable landing page.
 
@@ -50,5 +46,3 @@ Tailwind is loaded **via CDN**, so there’s no PostCSS/Tailwind build setup nee
 
 ## License
 
-You own your site’s content and branding. This starter is provided as-is.
->>>>>>> c8891e3 (Appable Website v1)
