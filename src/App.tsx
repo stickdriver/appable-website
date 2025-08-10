@@ -553,7 +553,18 @@ const Contact: React.FC = () => {
                   className={`w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 transition-colors ${
                     errors.name ? 'border-red-300 focus:ring-red-500' : 'border-gray-300 focus:ring-indigo-500'
                   }`}
-                  placeholder="Your full name" 
+                  placeholder="Your full name"
+                  onKeyDown={(e) => {
+                    if (e.code === 'Space') {
+                      e.preventDefault();
+                      const input = e.target as HTMLInputElement;
+                      const start = input.selectionStart || 0;
+                      const end = input.selectionEnd || 0;
+                      const value = input.value;
+                      input.value = value.slice(0, start) + ' ' + value.slice(end);
+                      input.setSelectionRange(start + 1, start + 1);
+                    }
+                  }}
                 />
                 {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
               </div>
@@ -586,6 +597,17 @@ const Contact: React.FC = () => {
                     errors.message ? 'border-red-300 focus:ring-red-500' : 'border-gray-300 focus:ring-indigo-500'
                   }`}
                   placeholder="Share with us what you're working on or ask a question..."
+                  onKeyDown={(e) => {
+                    if (e.code === 'Space') {
+                      e.preventDefault();
+                      const textarea = e.target as HTMLTextAreaElement;
+                      const start = textarea.selectionStart || 0;
+                      const end = textarea.selectionEnd || 0;
+                      const value = textarea.value;
+                      textarea.value = value.slice(0, start) + ' ' + value.slice(end);
+                      textarea.setSelectionRange(start + 1, start + 1);
+                    }
+                  }}
                 />
                 {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
               </div>

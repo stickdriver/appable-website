@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   const { name, email, message } = req.body;
 
   // Basic validation
-  if (!name || !email || !message) {
+  if (!name?.trim() || !email?.trim() || !message?.trim()) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
@@ -22,8 +22,8 @@ export default async function handler(req, res) {
 
   try {
     const data = await resend.emails.send({
-      from: 'contact@yourdomain.com', // You'll need to configure this with your domain
-      to: ['your-email@example.com'], // Replace with your actual email
+      from: 'contact@appable.dev', // Update with your verified domain
+      to: ['dennis@appable.dev'], // Replace with your actual email
       subject: `New contact form submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
