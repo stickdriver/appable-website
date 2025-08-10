@@ -293,7 +293,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Enhanced controls */}
-        <div className="mt-8 flex items-center justify-center gap-4">
+        <div className="mt-12 flex items-center justify-center gap-4">
           <button
             onClick={() => setPaused((p: boolean) => !p)}
             className="px-4 py-2 rounded-full border border-white/40 text-white/90 text-sm 
